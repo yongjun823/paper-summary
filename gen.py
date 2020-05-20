@@ -1,6 +1,5 @@
 import os
 import sys
-import glob
 
 dir_name = sys.argv[1]
 
@@ -14,4 +13,3 @@ with open(f'{dir_name}/README.md', 'w', encoding='utf-8') as f:
     
     for img in image_arr:
         f.write(f'![ww](./images/{img})  \n')
-    
