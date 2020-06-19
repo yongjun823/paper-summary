@@ -13,3 +13,9 @@ with open(f'{dir_name}/README.md', 'w', encoding='utf-8') as f:
     
     for img in image_arr:
         f.write(f'![ww](./images/{img})  \n')
+
+template = """* [{title} Summary](https://github.com/yongjun823/paper-summary/tree/master/{title})  
+[paper_title](paper_url) (author)  \n"""
+
+with open('README.md', 'a') as f:
+    f.writelines(template.format(title=dir_name))
